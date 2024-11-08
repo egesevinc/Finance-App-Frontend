@@ -16,6 +16,7 @@ function App() {
   };
 
   const onSearchSubmit = async (e: SyntheticEvent) => {
+    e.preventDefault();
     const result = await searchCompanies(search);
     if (typeof result === "string") {
       setServerError(result);
